@@ -26,18 +26,19 @@ while true; do
     echo   " /    |    \  ||  | \/\  \___|  | \// __ \\  \___ |    <  /_____/ |   |  \/ /_/  >"
     echo   " \____|__  /__||__|    \___  >__|  (____  /\___  >__|_ \         |___|  /\___  /" 
     echo   "         \/                \/           \/     \/     \/              \//_____/"  
-    echo   "=============================================================suite by fr4nc15===="
+    echo   "===============================================written in Easyuite by fr4nc15===="
     echo   ""
     echo   "DISCLAIMER: I do not own nor I am the author of the Aircrack-ng software and its" 
     echo   "derivates. This suite was created to simplify the process of using Aircrack-ng" 
     echo   "to test Wifi vulnerabilities."
     echo   "Therefore I take no responsibility for misuse of this software."
     echo   ""
-    echo "1. Execute Airmon-ng"
+    echo "1. Execute Airmon-ng (requires a compatible wlan card)"
     echo "2. Execute Airodump-ng (monitor only)"
     echo "3. Execute Airodump-ng (capture mode)"
     echo "4. Deauth attack (new terminal recommended)"
-    echo "5. Install Aircrack-ng"
+    echo "5. Password cracking (requires a wordlist and a .cap file)"
+    echo "6. Install Aircrack-ng"
     echo "99. Exit"
     echo "============================="
     read -p "Choose an option: " scelta
@@ -57,7 +58,7 @@ while true; do
     echo   " /    |    \  ||  | \/\  \___|  | \// __ \\  \___ |    <  /_____/ |   |  \/ /_/  >"
     echo   " \____|__  /__||__|    \___  >__|  (____  /\___  >__|_ \         |___|  /\___  /" 
     echo   "         \/                \/           \/     \/     \/              \//_____/"  
-    echo   "=============================================================suite by fr4nc15===="
+    echo   "=============================================written in Easysuite by fr4nc15===="
                 echo "1. Kill all processes"
                 echo "2. Put your Wi-fi card in Monitor Mode"
                 echo "3. Go back to main menu"
@@ -117,7 +118,15 @@ while true; do
            read
            ;;
 
-	5)  echo -e "\nUpdating your system..."
+    5) read -p "You are about to try and crack the password from a previously captured .cap file. You will also need a wordlist file and a valid handshake. Press Enter to continue..."
+        read -p "Type in the word list path (ex. /home/rockyou.txt):" wordlist
+        read -p "Type in the capture file location (ex. /home/capture.cap):" capture
+        sudo aircrack-ng -w $wordlist $capture
+        echo -e "\nAll done. Hit Enter to continue..."
+        read
+        ;;
+
+	6)  echo -e "\nUpdating your system..."
 	    sudo apt-get update && apt-get upgrade
 	    echo -e "\nInstalling Aircrack-ng..."
 	    sudo apt install aircrack-ng
