@@ -1,7 +1,18 @@
 #!/bin/bash
 
 exit=false
-
+function header() {
+        echo -e "================================================"
+        echo -e "|  _____                ____        _ _        |"
+        echo -e "| | ____|__ _ ___ _   _/ ___| _   _(_) |_ ___  |"
+        echo -e "| |  _| / _  / __| | | \___ \| | | | | __/ _ \ |"
+        echo -e "| | |__| (_| \__ \ |_| |___) | |_| | | ||  __/ |"
+        echo -e "| |_____\__,_|___/\__, |____/ \__,_|_|\__\___| |"
+        echo -e "|                 |___/                        |"
+        echo -e "=============================== by fr4nc15 ====="
+        echo -e "| Making your life easier, one tool at a time  |"
+        echo -e "================================================"
+}
 function backtomenu() {
         echo -e "\nGoing back to main menu..."
         exit=true
@@ -16,16 +27,7 @@ while true; do
         fi
         clear
         echo -e ""
-        echo -e "================================================"
-        echo -e "|  _____                ____        _ _        |"
-        echo -e "| | ____|__ _ ___ _   _/ ___| _   _(_) |_ ___  |"
-        echo -e "| |  _| / _  / __| | | \___ \| | | | | __/ _ \ |"
-        echo -e "| | |__| (_| \__ \ |_| |___) | |_| | | ||  __/ |"
-        echo -e "| |_____\__,_|___/\__, |____/ \__,_|_|\__\___| |"
-        echo -e "|                 |___/                        |"
-        echo -e "=============================== by fr4nc15 ====="
-        echo -e "| Making your life easier, one tool at a time  |"
-        echo -e "================================================"
+        header
         echo -e "MAIN MENU"
         echo -e "--------------------------"
         echo -e "1. Check for updates"
@@ -43,16 +45,7 @@ while true; do
 
                         clear
                         echo -e ""
-                        echo -e "================================================"
-                        echo -e "|  _____                ____        _ _        |"
-                        echo -e "| | ____|__ _ ___ _   _/ ___| _   _(_) |_ ___  |"
-                        echo -e "| |  _| / _  / __| | | \___ \| | | | | __/ _ \ |"
-                        echo -e "| | |__| (_| \__ \ |_| |___) | |_| | | ||  __/ |"
-                        echo -e "| |_____\__,_|___/\__, |____/ \__,_|_|\__\___| |"
-                        echo -e "|                 |___/                        |"
-                        echo -e "=============================== by fr4nc15 ====="
-                        echo -e "| Making your life easier, one tool at a time  |"
-                        echo -e "================================================"
+                        header
                         echo -e ""
                         echo -e "Checking for system updates..."
                         sudo apt-get update
@@ -63,16 +56,7 @@ while true; do
 
                         clear
                         echo -e ""
-                        echo -e "================================================"
-                        echo -e "|  _____                ____        _ _        |"
-                        echo -e "| | ____|__ _ ___ _   _/ ___| _   _(_) |_ ___  |"
-                        echo -e "| |  _| / _  / __| | | \___ \| | | | | __/ _ \ |"
-                        echo -e "| | |__| (_| \__ \ |_| |___) | |_| | | ||  __/ |"
-                        echo -e "| |_____\__,_|___/\__, |____/ \__,_|_|\__\___| |"
-                        echo -e "|                 |___/                        |"
-                        echo -e "=============================== by fr4nc15 ====="
-                        echo -e "| Making your life easier, one tool at a time  |"
-                        echo -e "================================================"
+                        header
                         echo -e ""
                         echo -e "Updating your system..."
                         sudo apt-get upgrade
@@ -84,16 +68,7 @@ while true; do
 
                         clear
                         echo -e ""
-                        echo -e "================================================"
-                        echo -e "|  _____                ____        _ _        |"
-                        echo -e "| | ____|__ _ ___ _   _/ ___| _   _(_) |_ ___  |"
-                        echo -e "| |  _| / _  / __| | | \___ \| | | | | __/ _ \ |"
-                        echo -e "| | |__| (_| \__ \ |_| |___) | |_| | | ||  __/ |"
-                        echo -e "| |_____\__,_|___/\__, |____/ \__,_|_|\__\___| |"
-                        echo -e "|                 |___/                        |"
-                        echo -e "=============================== by fr4nc15 ====="
-                        echo -e "| Making your life easier, one tool at a time  |"
-                        echo -e "================================================"
+                        header
                         echo -e ""
                         echo -e "Checking for system information..."
                         hostnamectl
@@ -105,16 +80,7 @@ while true; do
 
                         clear
                         echo -e ""
-                        echo -e "================================================"
-                        echo -e "|  _____                ____        _ _        |"
-                        echo -e "| | ____|__ _ ___ _   _/ ___| _   _(_) |_ ___  |"
-                        echo -e "| |  _| / _  / __| | | \___ \| | | | | __/ _ \ |"
-                        echo -e "| | |__| (_| \__ \ |_| |___) | |_| | | ||  __/ |"
-                        echo -e "| |_____\__,_|___/\__, |____/ \__,_|_|\__\___| |"
-                        echo -e "|                 |___/                        |"
-                        echo -e "=============================== by fr4nc15 ====="
-                        echo -e "| Making your life easier, one tool at a time  |"
-                        echo -e "================================================"
+                        header
                         echo -e ""
                         echo -e "Removing unnecessary packets..."
                         sudo apt autoremove
@@ -125,16 +91,7 @@ while true; do
 
                         clear
                         echo -e ""
-                        echo -e "================================================"
-                        echo -e "|  _____                ____        _ _        |"
-                        echo -e "| | ____|__ _ ___ _   _/ ___| _   _(_) |_ ___  |"
-                        echo -e "| |  _| / _  / __| | | \___ \|: | | | | __/ _ \ |"
-                        echo -e "| | |__| (_| \__ \ |_| |___) | |_| | | ||  __/ |"
-                        echo -e "| |_____\__,_|___/\__, |____/ \__,_|_|\__\___| |"
-                        echo -e "|                 |___/                        |"
-                        echo -e "=============================== by fr4nc15 ====="
-                        echo -e "| Making your life easier, one tool at a time  |"
-                        echo -e "================================================"
+                        header
                         echo -e ""
                         echo -e "Checking Network information..."
                         iwconfig
@@ -149,16 +106,7 @@ while true; do
                         fi
                         clear
                         echo -e ""
-                        echo -e "================================================"
-                        echo -e "|  _____                ____        _ _        |"
-                        echo -e "| | ____|__ _ ___ _   _/ ___| _   _(_) |_ ___  |"
-                        echo -e "| |  _| / _  / __| | | \___ \| | | | | __/ _ \ |"
-                        echo -e "| | |__| (_| \__ \ |_| |___) | |_| | | ||  __/ |"
-                        echo -e "| |_____\__,_|___/\__, |____/ \__,_|_|\__\___| |"
-                        echo -e "|                 |___/                        |"
-                        echo -e "=============================== by fr4nc15 ====="
-                        echo -e "| Making your life easier, one tool at a time  |"
-                        echo -e "================================================"
+                        header
                         echo -e "ESSENTIAL TOOLS"
                         echo -e "---------------"
                         echo -e "1. Nmap"
@@ -261,7 +209,6 @@ while true; do
                         echo -e "|                 |___/                        |"
                         echo -e "=============================== by fr4nc15 ====="
                         echo -e "| Making your life easier, one tool at a time  |"
-                        echo -e ""
                         echo -e "================================================"
                         echo -e "Exiting..."
                         exit 0
