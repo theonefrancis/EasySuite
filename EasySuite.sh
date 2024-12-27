@@ -1,10 +1,10 @@
 #!/bin/bash
 exit=false
-function backtomenu() {
+#function backtomenu() {
         echo -e "\nGoing back to main menu..."
         exit=true
 }
-trap backtomenu SIGINT
+#trap backtomenu SIGINT
 while true; do
         if [ "$exit" = true ]; then
                 exit=false
