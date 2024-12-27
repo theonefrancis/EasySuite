@@ -1,7 +1,17 @@
 #!/bin/bash
-
 exit=false
-function header() {
+function backtomenu() {
+        echo -e "\nGoing back to main menu..."
+        exit=true
+}
+trap backtomenu SIGINT
+while true; do
+        if [ "$exit" = true ]; then
+                exit=false
+                break
+        fi
+        clear
+        echo -e ""
         echo -e "================================================"
         echo -e "|  _____                ____        _ _        |"
         echo -e "| | ____|__ _ ___ _   _/ ___| _   _(_) |_ ___  |"
@@ -12,22 +22,6 @@ function header() {
         echo -e "=============================== by fr4nc15 ====="
         echo -e "| Making your life easier, one tool at a time  |"
         echo -e "================================================"
-}
-function backtomenu() {
-        echo -e "\nGoing back to main menu..."
-        exit=true
-}
-
-trap backtomenu SIGINT
-
-while true; do
-        if [ "$exit" = true ]; then
-                exit=false
-                break
-        fi
-        clear
-        echo -e ""
-        header
         echo -e "MAIN MENU"
         echo -e "--------------------------"
         echo -e "1. Check for updates"
@@ -39,65 +33,97 @@ while true; do
         echo -e "00. Exit"
         echo -e "--------------------------"
         read -p "Choose an option:" number
-
         case $number in
         1)
-
                         clear
                         echo -e ""
-                        header
+                        echo -e "================================================"
+                        echo -e "|  _____                ____        _ _        |"
+                        echo -e "| | ____|__ _ ___ _   _/ ___| _   _(_) |_ ___  |"
+                        echo -e "| |  _| / _  / __| | | \___ \| | | | | __/ _ \ |"
+                        echo -e "| | |__| (_| \__ \ |_| |___) | |_| | | ||  __/ |"
+                        echo -e "| |_____\__,_|___/\__, |____/ \__,_|_|\__\___| |"
+                        echo -e "|                 |___/                        |"
+                        echo -e "=============================== by fr4nc15 ====="
+                        echo -e "| Making your life easier, one tool at a time  |"
+                        echo -e "================================================"
                         echo -e ""
                         echo -e "Checking for system updates..."
                         sudo apt-get update
                         read -p "All done! Hit Enter to go back to menu..."
                 ;;
-
         2)
-
                         clear
                         echo -e ""
-                        header
+                        echo -e "================================================"
+                        echo -e "|  _____                ____        _ _        |"
+                        echo -e "| | ____|__ _ ___ _   _/ ___| _   _(_) |_ ___  |"
+                        echo -e "| |  _| / _  / __| | | \___ \| | | | | __/ _ \ |"
+                        echo -e "| | |__| (_| \__ \ |_| |___) | |_| | | ||  __/ |"
+                        echo -e "| |_____\__,_|___/\__, |____/ \__,_|_|\__\___| |"
+                        echo -e "|                 |___/                        |"
+                        echo -e "=============================== by fr4nc15 ====="
+                        echo -e "| Making your life easier, one tool at a time  |"
+                        echo -e "================================================"
                         echo -e ""
                         echo -e "Updating your system..."
                         sudo apt-get upgrade
                         read -p "All done! Hit Enter to go back to menu..."
-
                 ;;
-
         3)
-
                         clear
                         echo -e ""
-                        header
+                        echo -e "================================================"
+                        echo -e "|  _____                ____        _ _        |"
+                        echo -e "| | ____|__ _ ___ _   _/ ___| _   _(_) |_ ___  |"
+                        echo -e "| |  _| / _  / __| | | \___ \| | | | | __/ _ \ |"
+                        echo -e "| | |__| (_| \__ \ |_| |___) | |_| | | ||  __/ |"
+                        echo -e "| |_____\__,_|___/\__, |____/ \__,_|_|\__\___| |"
+                        echo -e "|                 |___/                        |"
+                        echo -e "=============================== by fr4nc15 ====="
+                        echo -e "| Making your life easier, one tool at a time  |"
+                        echo -e "================================================"
                         echo -e ""
                         echo -e "Checking for system information..."
                         hostnamectl
                         read -p "All done! Hit Enter to go back to menu..."
                 ;;
-
-
         4)
-
                         clear
                         echo -e ""
-                        header
+                        echo -e "================================================"
+                        echo -e "|  _____                ____        _ _        |"
+                        echo -e "| | ____|__ _ ___ _   _/ ___| _   _(_) |_ ___  |"
+                        echo -e "| |  _| / _  / __| | | \___ \| | | | | __/ _ \ |"
+                        echo -e "| | |__| (_| \__ \ |_| |___) | |_| | | ||  __/ |"
+                        echo -e "| |_____\__,_|___/\__, |____/ \__,_|_|\__\___| |"
+                        echo -e "|                 |___/                        |"
+                        echo -e "=============================== by fr4nc15 ====="
+                        echo -e "| Making your life easier, one tool at a time  |"
+                        echo -e "================================================"
                         echo -e ""
                         echo -e "Removing unnecessary packets..."
                         sudo apt autoremove
                         read -p "All done! Hit Enter to go back to menu..."
                 ;;
-
         5)
-
                         clear
                         echo -e ""
-                        header
+                        echo -e "================================================"
+                        echo -e "|  _____                ____        _ _        |"
+                        echo -e "| | ____|__ _ ___ _   _/ ___| _   _(_) |_ ___  |"
+                        echo -e "| |  _| / _  / __| | | \___ \|: | | | | __/ _ \ |"
+                        echo -e "| | |__| (_| \__ \ |_| |___) | |_| | | ||  __/ |"
+                        echo -e "| |_____\__,_|___/\__, |____/ \__,_|_|\__\___| |"
+                        echo -e "|                 |___/                        |"
+                        echo -e "=============================== by fr4nc15 ====="
+                        echo -e "| Making your life easier, one tool at a time  |"
+                        echo -e "================================================"
                         echo -e ""
                         echo -e "Checking Network information..."
                         iwconfig
                         read -p "All done! Hit Enter to go back to menu..."
                 ;;
-
         6)
                 while true; do
                         if [ "$exit" = true ]; then
@@ -106,7 +132,16 @@ while true; do
                         fi
                         clear
                         echo -e ""
-                        header
+                        echo -e "================================================"
+                        echo -e "|  _____                ____        _ _        |"
+                        echo -e "| | ____|__ _ ___ _   _/ ___| _   _(_) |_ ___  |"
+                        echo -e "| |  _| / _  / __| | | \___ \| | | | | __/ _ \ |"
+                        echo -e "| | |__| (_| \__ \ |_| |___) | |_| | | ||  __/ |"
+                        echo -e "| |_____\__,_|___/\__, |____/ \__,_|_|\__\___| |"
+                        echo -e "|                 |___/                        |"
+                        echo -e "=============================== by fr4nc15 ====="
+                        echo -e "| Making your life easier, one tool at a time  |"
+                        echo -e "================================================"
                         echo -e "ESSENTIAL TOOLS"
                         echo -e "---------------"
                         echo -e "1. Nmap"
@@ -116,7 +151,6 @@ while true; do
                         echo -e "5. Social Engineering Toolkit"
                         echo -e "00. Back to main menu"
                         read -p "Choose an option:" essentials
-
                         case $essentials in
                                 1)
                                         NMAP="nmap"
@@ -144,7 +178,6 @@ while true; do
                                                 read -p "Aircrack is already installed in your system, to execute type 'sudo aircrack-ng' in another terminal..."
                                         fi
                                         ;;
-
                                 3)
                                         WIRESHARK="wireshark"
                                         echo -e "Checking for Wireshark on your system..."
@@ -188,15 +221,10 @@ while true; do
                                                 echo -e "Going back to main menu..."
                                                 break
                                         ;;
-
                         esac
-
                 done
                 ;;
-
-
         00)
-
                 while true; do
                         clear
                         echo -e ""
@@ -209,13 +237,11 @@ while true; do
                         echo -e "|                 |___/                        |"
                         echo -e "=============================== by fr4nc15 ====="
                         echo -e "| Making your life easier, one tool at a time  |"
+                        echo -e ""
                         echo -e "================================================"
                         echo -e "Exiting..."
                         exit 0
-
                 done
                 ;;
-
-
         esac
 done
