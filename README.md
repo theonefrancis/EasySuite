@@ -1,4 +1,4 @@
-# easySuite
+# EasySuite
 My compilation of easy rewritten scripts.
 
 So, one night I came out with an idea. Since I spend most of the time testing softwares and punching defenses to look for patchable
