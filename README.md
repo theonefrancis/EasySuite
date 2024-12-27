@@ -6,3 +6,5 @@ vulnerabilities, I thought it was about time to create a simple shell script tha
 Right now it contains some useful tools to check, update and monitor the system you work on.
 I have also added some third-party tools useful for learning the ropes of Penetration testing.
 The final goal is to create something that will help you set up your machine quickly enough and save time in the long haul.
+
+![alt text](https://github.com/theonefrancis/easySuite/blob/main/cover.png)
