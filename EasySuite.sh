@@ -1,8 +1,8 @@
 #!/bin/bash
 exit=false
 #function backtomenu() {
-        echo -e "\nGoing back to main menu..."
-        exit=true
+        #echo -e "\nGoing back to main menu..."
+        #exit=true
 }
 #trap backtomenu SIGINT
 while true; do
