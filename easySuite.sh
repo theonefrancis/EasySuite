@@ -28,6 +28,7 @@ while true; do
         fi
         clear
         header
+	echo -e ""
         echo -e "MAIN MENU"
         echo -e "--------------------------"
         echo -e "1. Check for updates"
@@ -36,9 +37,11 @@ while true; do
         echo -e "4. Remove unnecessary packets"
         echo -e "5. Check Network information"
         echo -e "6. Essential tools"
+	echo -e ""
         echo -e "00. Exit"
         echo -e "--------------------------"
-        read -p "Choose an option:" number
+	echo -e ""
+        read -p "easySuite>" number
 
         case $number in
         1)
@@ -102,6 +105,7 @@ while true; do
                         fi
                         clear
                         header
+			echo -e ""
                         echo -e "ESSENTIAL TOOLS"
                         echo -e "---------------"
                         echo -e "1. Nmap"
@@ -109,8 +113,13 @@ while true; do
                         echo -e "3. Wireshark"
                         echo -e "4. MetaSploit Framework"
                         echo -e "5. Social Engineering Toolkit"
+			echo -e "6. Bettercap"
+			echo -e "7. Lynis"
+			echo -e ""
                         echo -e "00. Back to main menu"
-                        read -p "Choose an option:" essentials
+			echo -e "---------------"
+			echo -e ""
+                        read -p "easySuite>" essentials
 
                         case $essentials in
                                 1)
@@ -179,6 +188,38 @@ while true; do
                                                 read -p "Social Engineering Toolkit is already installed in your system, to execute type 'sudo set' in another terminal..."
                                         fi
                                         ;;
+
+				6)
+					BETTERCAP="bettercap"
+					echo -e "Checking for Bettercap on your system..."
+					if ! command -v  $BETTERCAP &> /dev/null
+					then
+						echo "$BETTERCAP is not installed. Installing..."
+						sudo apt update
+						cd /opt
+						sudo git clone https://github.com/bettercap/bettercap.git
+						sudo make
+						read -p "Done! Hit Enter to go back..."
+					else
+						read -p "Bettercap is already installed in your system, to execute type 'sudo bettercap' in another terminal..."
+					fi
+					;;
+                                7)
+                                        LYNIS="lynis"
+                                        echo -e "Checking for Lynis on your system..."
+                                        if ! command -v  $LYNIS &> /dev/null
+                                        then
+                                                echo "$LYNIS is not installed. Installing..."
+                                                sudo apt update
+                                                cd /opt
+                                                sudo apt install lynis
+                                                read -p "Done! Hit Enter to go back..."
+                                        else
+                                                read -p "Lynis is already installed in your system, to execute type 'sudo lynis' in another terminal..."
+                                        fi
+                                        ;;
+
+
                                 00)
                                                 echo -e "Going back to main menu..."
                                                 break
