@@ -105,7 +105,7 @@ while true; do
                         fi
                         clear
                         header
-			echo -e ""
+						echo -e ""
                         echo -e "ESSENTIAL TOOLS"
                         echo -e "---------------"
                         echo -e "1. Nmap"
@@ -113,12 +113,14 @@ while true; do
                         echo -e "3. Wireshark"
                         echo -e "4. MetaSploit Framework"
                         echo -e "5. Social Engineering Toolkit"
-			echo -e "6. Bettercap"
-			echo -e "7. Lynis"
-			echo -e ""
+						echo -e "6. Bettercap"
+						echo -e "7. Lynis"
+						echo -e "8. OpenVPN"
+						echo -e "9. chkrootkit"
+						echo -e ""
                         echo -e "00. Back to main menu"
-			echo -e "---------------"
-			echo -e ""
+						echo -e "---------------"
+						echo -e ""
                         read -p "easySuite>" essentials
 
                         case $essentials in
@@ -189,21 +191,21 @@ while true; do
                                         fi
                                         ;;
 
-				6)
-					BETTERCAP="bettercap"
-					echo -e "Checking for Bettercap on your system..."
-					if ! command -v  $BETTERCAP &> /dev/null
-					then
-						echo "$BETTERCAP is not installed. Installing..."
-						sudo apt update
-						cd /opt
-						sudo git clone https://github.com/bettercap/bettercap.git
-						sudo make
-						read -p "Done! Hit Enter to go back..."
-					else
-						read -p "Bettercap is already installed in your system, to execute type 'sudo bettercap' in another terminal..."
-					fi
-					;;
+								6)
+										BETTERCAP="bettercap"
+										echo -e "Checking for Bettercap on your system..."
+										if ! command -v  $BETTERCAP &> /dev/null
+										then
+											echo "$BETTERCAP is not installed. Installing..."
+											sudo apt update
+											cd /opt
+											sudo git clone https://github.com/bettercap/bettercap.git
+											sudo make
+											read -p "Done! Hit Enter to go back..."
+										else
+											read -p "Bettercap is already installed in your system, to execute type 'sudo bettercap' in another terminal..."
+										fi
+										;;
                                 7)
                                         LYNIS="lynis"
                                         echo -e "Checking for Lynis on your system..."
@@ -218,8 +220,34 @@ while true; do
                                                 read -p "Lynis is already installed in your system, to execute type 'sudo lynis' in another terminal..."
                                         fi
                                         ;;
-
-
+                                8)
+                                        OPENVPN="openvpn"
+                                        echo -e "Checking for OpenVPN on your system..."
+                                        if ! command -v  $OPENVPN &> /dev/null
+                                        then
+                                                echo "$OPENVPN is not installed. Installing..."
+                                                sudo apt update
+                                                cd /opt
+                                                sudo apt install openvpn
+                                                read -p "Done! Hit Enter to go back..."
+                                        else
+                                                read -p "OpenVPN is already installed in your system, to execute type 'sudo openvpn' in another terminal..." 
+                                        fi
+                                        ;;
+                                9)
+                                        CHKROOTKIT="chkrootkit"
+                                        echo -e "Checking for chkrootkit on your system..."
+                                        if ! command -v  $CHKROOTKIT &> /dev/null
+                                        then
+                                                echo "$CHKROOTKIT is not installed. Installing..."
+                                                sudo apt update
+                                                cd /opt
+                                                sudo apt install chkrootkit
+                                                read -p "Done! Hit Enter to go back..."
+                                        else
+                                                read -p "Chkrootkit is already installed in your system, to execute type 'sudo chkrootkit' in another terminal..." 
+                                        fi
+                                        ;;
                                 00)
                                                 echo -e "Going back to main menu..."
                                                 break
