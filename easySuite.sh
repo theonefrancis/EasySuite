@@ -28,7 +28,7 @@ while true; do
         fi
         clear
         header
-	echo -e ""
+		echo -e ""
         echo -e "MAIN MENU"
         echo -e "--------------------------"
         echo -e "1. Check for updates"
@@ -37,10 +37,10 @@ while true; do
         echo -e "4. Remove unnecessary packets"
         echo -e "5. Check Network information"
         echo -e "6. Essential tools"
-	echo -e ""
+		echo -e ""
         echo -e "00. Exit"
         echo -e "--------------------------"
-	echo -e ""
+		echo -e ""
         read -p "easySuite>" number
 
         case $number in
@@ -72,7 +72,7 @@ while true; do
                         echo -e ""
                         echo -e "Checking for system information..."
                         hostnamectl
-                        read -p "All done! Hit Enter to go back to menu..."
+                        read -p "Hit Enter to go back to menu when ready..."
                 ;;
 
 
